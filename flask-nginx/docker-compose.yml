@@ -5,10 +5,9 @@ services:
       context: /home/muneeb/Documents/Nginx-reverse-proxy/flask-nginx/app1
       dockerfile: Dockerfile 
     image: app1-img:1
-  
-    ports:
-      - '5001:5000'
-    container_name: app1-cont
+    # ports:
+    #   - '5001:5000'
+    container_name: app1-container
     networks:
       - my_network
     volumes:
@@ -19,9 +18,9 @@ services:
       context: /home/muneeb/Documents/Nginx-reverse-proxy/flask-nginx/app2 
       dockerfile: Dockerfile  
     image: app2-img:1 
-    ports:
-      - '5002:5000'
-    container_name: app2-cont
+    # ports:
+    #   - '5002:5000'
+    container_name: app2-container
     networks:
       - my_network
     volumes:
